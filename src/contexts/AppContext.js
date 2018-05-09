@@ -9,15 +9,15 @@ export class AppProvider extends React.Component {
 
   addMessage = message => {
     this.setState({
-      messages: state.messages.concat(message)
+      messages: this.state.messages.concat(message)
     });
   };
 
   deleteMssage = index => {
     return {
       messages: [
-        ...state.messages.slice(0, index),
-        ...state.messages.slice(index + 1, state.messages.length)
+        ...this.state.messages.slice(0, index),
+        ...this.state.messages.slice(index + 1, this.state.messages.length)
       ]
     };
   };
