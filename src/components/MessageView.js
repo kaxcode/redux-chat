@@ -2,7 +2,7 @@ import React from "react";
 
 class MessageView extends React.Component {
   handleClick = id => {
-    this.props.store.dispatch({
+    this.props.messages.dispatch({
       type: "DELETE_MESSAGE",
       id: id
     });
@@ -21,6 +21,7 @@ class MessageView extends React.Component {
         </div>
       </div>
     ));
+
     return (
       <div className="ui center aligned basic segment">
         <div className="ui comments">{messages}</div>
