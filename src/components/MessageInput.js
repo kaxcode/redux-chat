@@ -36,3 +36,5 @@ class MessageInput extends React.Component {
     );
   }
 }
+
+export default MessageInput;
