@@ -9,7 +9,13 @@ import { AppProvider, AppContext } from "./contexts/AppContext";
 ReactDOM.render(
   <AppProvider>
     <AppContext.Consumer>
-      {({ messages }) => <App messages={messages} />}
+      {({ messages, addMessage, deleteMessage }) => (
+        <App
+          messages={messages}
+          addMessage={addMessage}
+          deleteMessage={deleteMessage}
+        />
+      )}
     </AppContext.Consumer>
   </AppProvider>,
   document.getElementById("root")
