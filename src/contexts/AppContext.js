@@ -14,12 +14,12 @@ export class AppProvider extends React.Component {
   };
 
   deleteMessage = index => {
-    return {
+    this.setState({
       messages: [
         ...this.state.messages.slice(0, index),
         ...this.state.messages.slice(index + 1, this.state.messages.length)
       ]
-    };
+    });
   };
 
   render() {
