@@ -13,7 +13,7 @@ export class AppProvider extends React.Component {
     });
   };
 
-  deleteMssage = index => {
+  deleteMessage = index => {
     return {
       messages: [
         ...this.state.messages.slice(0, index),
@@ -28,7 +28,7 @@ export class AppProvider extends React.Component {
         value={{
           ...this.state,
           addMessage: this.addMessage,
-          deleteMssage: this.deleteMssage
+          deleteMessage: this.deleteMessage
         }}
       >
         {this.props.children}
