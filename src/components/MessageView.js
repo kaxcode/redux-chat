@@ -1,27 +1,17 @@
 import React from "react";
 
 class MessageView extends React.Component {
-  handleClick = id => {
-    this.props.messages.dispatch({
-      type: "DELETE_MESSAGE",
-      id: id
-    });
-  };
-
   render() {
     const messages = this.props.messages.map((message, index) => (
       <div
         className="comment"
         key={index}
-        onClick={() => this.handleClick(message.id)}
+        onClick={() => this.props.deleteMessage(index)}
       >
-        <div className="text">
-          {message.text}
-          <span className="metadata">@{message.timestamp}</span>
-        </div>
+        {message}
       </div>
     ));
-
+    console.log(messages);
     return (
       <div className="ui center aligned basic segment">
         <div className="ui comments">{messages}</div>

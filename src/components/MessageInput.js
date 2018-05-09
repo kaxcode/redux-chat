@@ -11,22 +11,12 @@ class MessageInput extends React.Component {
     });
   };
 
-  handleSubmit = () => {
-    this.props.store.dispatch({
-      type: "ADD_MESSAGE",
-      text: this.state.value
-    });
-    this.setState({
-      value: ""
-    });
-  };
-
   render() {
     return (
       <div className="ui input">
         <input onChange={this.onChange} value={this.state.value} type="text" />
         <button
-          onClick={this.handleSubmit}
+          onClick={() => this.props.addMessage(this.state.value)}
           className="ui primary button"
           type="submit"
         >
