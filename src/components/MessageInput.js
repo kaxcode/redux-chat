@@ -1,4 +1,5 @@
 import React from "react";
+import { AppContext } from "../contexts/AppContext";
 
 class MessageInput extends React.Component {
   state = {
@@ -15,13 +16,17 @@ class MessageInput extends React.Component {
     return (
       <div className="ui input">
         <input onChange={this.onChange} value={this.state.value} type="text" />
-        <button
-          onClick={() => this.props.addMessage(this.state.value)}
-          className="ui primary button"
-          type="submit"
-        >
-          Submit
-        </button>
+        <AppContext.Consumer>
+          {({ addMessage }) => (
+            <button
+              onClick={() => addMessage(this.state.value)}
+              className="ui primary button"
+              type="submit"
+            >
+              Submit
+            </button>
+          )}
+        </AppContext.Consumer>
       </div>
     );
   }
