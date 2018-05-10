@@ -14,15 +14,11 @@ class MessageInput extends React.Component {
 
   render() {
     return (
-      <div className="ui input">
+      <div>
         <input onChange={this.onChange} value={this.state.value} type="text" />
         <AppContext.Consumer>
           {({ addMessage }) => (
-            <button
-              onClick={() => addMessage(this.state.value)}
-              className="ui primary button"
-              type="submit"
-            >
+            <button onClick={() => addMessage(this.state.value)} type="submit">
               Submit
             </button>
           )}

@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import MessageInput from "./components/MessageInput";
 import MessageView from "./components/MessageView";
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="ui segment">
+      <div>
         <MessageView />
         <MessageInput />
       </div>
