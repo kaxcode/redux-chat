@@ -6,11 +6,8 @@ class App extends Component {
   render() {
     return (
       <div className="ui segment">
-        <MessageView
-          messages={this.props.messages}
-          deleteMessage={this.props.deleteMessage}
-        />
-        <MessageInput addMessage={this.props.addMessage} />
+        <MessageView />
+        <MessageInput />
       </div>
     );
   }
