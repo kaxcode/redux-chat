@@ -8,7 +8,7 @@ class MessageView extends React.Component {
         {({ messages, deleteMessage }) =>
           messages.map((message, index) => (
             <div
-              className="comment"
+              className="MessageView__Comment"
               key={index}
               onClick={() => deleteMessage(index)}
             >
@@ -20,9 +20,9 @@ class MessageView extends React.Component {
     );
 
     return (
-      <div>
-        <div>{messages}</div>
-      </div>
+      <main>
+        <div className="MessageView__MessagesList">{messages}</div>
+      </main>
     );
   }
 }
