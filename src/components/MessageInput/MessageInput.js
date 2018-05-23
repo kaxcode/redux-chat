@@ -15,11 +15,20 @@ class MessageInput extends React.Component {
 
   render() {
     return (
-      <div>
-        <input onChange={this.onChange} value={this.state.value} type="text" />
+      <div className="MessageInput__Container">
+        <input
+          className="MessageInput"
+          onChange={this.onChange}
+          value={this.state.value}
+          type="text"
+        />
         <AppContext.Consumer>
           {({ addMessage }) => (
-            <button onClick={() => addMessage(this.state.value)} type="submit">
+            <button
+              classname="MessageInput__Btn"
+              onClick={() => addMessage(this.state.value)}
+              type="submit"
+            >
               Submit
             </button>
           )}
