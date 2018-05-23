@@ -1,5 +1,5 @@
 import React from "react";
-import MessageInput from "./components/MessageInput";
+import MessageInput from "./components/MessageInput/MessageInput";
 import MessageView from "./components/MessageView/MessageView";
 
 class App extends React.Component {
