@@ -1,0 +1,12 @@
+.MessageView__ListContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 230px 300px 1fr;
+}
+
+.MessageView__MessagesList {
+  grid-area: 2/2/3/3;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+}
