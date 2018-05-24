@@ -20,11 +20,7 @@ class MessageView extends React.Component {
       </AppContext.Consumer>
     );
 
-    return (
-      <main className="MessageView__ListContainer">
-        <div className="MessageView__MessagesList">{messages}</div>
-      </main>
-    );
+    return <div className="MessageView__MessagesList">{messages}</div>;
   }
 }
 
